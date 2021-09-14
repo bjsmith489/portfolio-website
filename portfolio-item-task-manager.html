@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+            <link re="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+            <script src="https://kit.fontawesome.com/bb2857735e.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="css/style.css">
+            <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        </head>
+    <body>
+        <header>
+            <div class="logo">
+                
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Full Stack <strong>To-Do List</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Benjamin Smith</p>
+        <img src="img/login_page.png" alt="A guitar" class="intro__img"/> 
+
+    </section>
+
+    <div class="portfolio-item-individual">
+        <p>
+            The following appliaction is a reflection of understanding in the Java Full Stack set up. It 
+            uses Spring Boot MVC design to create a to-do list that allows the user to log in with security and
+            save the login credentials. It uses MySQL for a back-end database to store the user information and the task they have assigned to themseles.
+            
+        </p>
+        <p>The application takes advantage of Hibernate to handle all the ORM of the tasks and users onto 
+            classic POJOs. The front-end is served with jsp's and gets stylized with CSS. Inline Javascript gets
+            used to handle transferring tasks and user information from jsp to jsp, or jsp to controllers. 
+        </p>
+        <section class="dark-page-description">
+            <h3>The Initial Page</h3>
+            <p>
+                The inital login page is set up is simple. Sign in or register. The registration page and login page
+                is secure using Spring Security. 
+            </p>
+            <img src="img/login_page.png" alt="portfolio details">
+        </section>
+        <section class="light-page-description">
+            <h3>
+            The Registration Page</h3>
+            <p>
+                The first step the user must do is register their account. Its as simple as clicking
+                register. This will route to the display registration page. The steps are simple, username 
+                password and an email account. The user cannot register if the username has been taken.
+                The advantage here is that multiple accounts can then be linked to the same email address.
+                Additionally this registration is followed by sending a confirmation email to the email address provided. 
+            </p>
+            <img src="img/registration_page.png" alt="portfolio details">
+        </section>
+        <section class="dark-page-description">
+            <h3>The Task Page</h3>
+            <p>
+                The task page is designed to be minimalistic. It uses a single controller that 
+                determines all the back-end work. This is true for the edit-task operations and the add-task operation.
+                The task cannot be added unless all the information is filled out. This is to ensure database integrity.
+            </p>
+            <p>
+                The other iportant asect of this application is that the user as well as any tasks that get assigned form the user,
+                can send confirmation emails to ensure communication is met. If the checkbox is clicked on creation of the email,
+                then an email will be sent to both parties.
+            </p>
+            <img src="img/before_task_page.png" alt="portfolio details">
+        </section>
+        <section class="light-page-description">
+            <h3>Submitting your task</h3>
+            <p>
+                Once you have submitted the tasks, they appear in a table above. The option then appears
+                to be able to complete (delete), or to edit the task.
+            </p>
+            <img src="img/after_task_page.png" alt="portfolio details">
+        </section>
+        <section class="dark-page-description">
+            <h3>Editing your task</h3>
+            <p>
+                The editor is connected to the task entry id, which is hidden from the user. 
+                the task page will not sublit any information unless the field is altered. Additionally the severity field 
+                has an additional option which is 'no change' to accomodate no alteration on the selector.
+            </p>
+            <img src="img/edit_task_page.png" alt="portfolio details">
+        </section>
+        <section class="light-page-description">
+            <h3>Summary Of Code</h3>
+            <p>
+                All code for the task manager can be found on my github link below.
+            </p>
+        </section>
+    </div>
+
+
+
+      <!-- Footer  -->
+      <footer class="footer">
+          <a href="mailto:benjaminsmith489@gmail.com" class="footer__link">benjaminsmith489@gmail.com</a>
+          <ul class="social-list">
+                <li class="social-list__item">
+                  <a class="social-list__link" href="https://github.com/bjsmith489/task-manager.git">
+                      <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a
+                      class="social-list__link"
+                      href="https://www.linkedin.com/in/benjamin-smith-datascience/"
+                    >
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                <li class="social-list__item">
+                    <a class="social-list__link"></a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link"></a>
+                </li>
+          </ul>
+      </footer>
+
+
+      <script src="js/index.js"></script>
+
+    </body>
+</html>
