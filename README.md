@@ -1,6 +1,6 @@
 # portfolio-website
 
-PLease visit and view the portfolio website at:
+Please visit and view the portfolio website at:
 
 https://bjsmith489.github.io/portfolio-website/
 
