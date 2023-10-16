@@ -12,10 +12,10 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: rgb(149, 204, 218);
-  --clr-dark: #15025c;
-  --clr-accent: #4bb7e2;
-  --clr-accent2: #009272;
+  --clr-light: rgb(116, 182, 176);
+  --clr-dark: #190a4e;
+  --clr-accent: #548ffd;
+  --clr-accent2: #213aad;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -58,6 +58,32 @@ body {
 
 section {
   padding: 5em 2em;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-width: 80vh;
+}
+
+.stationary-hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transition: all 1s;
+}
+
+.transforming-hidden {
+  opacity: 0;
+  transition: all .8s;
+  transform: translateX(-100%);
+}
+
+.stationary-show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.transforming-show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 img {
@@ -128,7 +154,7 @@ h3 {
 
 .section__subtitle--intro,
 .section__subtitle--about {
-  background: var(--clr-accent);
+  background: var(--clr-accent2);
   padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
@@ -247,6 +273,86 @@ header {
   bottom: 6px;
 }
 
+/* Icon Animations */
+
+.rotate {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#cursor_1 {
+  position: fixed;
+  border: 1px solid #07085e;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition-duration: 150ms;
+}
+
+#cursor_2 {
+  position: fixed;
+  border: 1px solid #1d2596;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition-duration: 100ms;
+}
+
+#cursor_3 {
+  position: fixed;
+  border: 1px solid #545ee7;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition-duration: 30ms;
+}
+
+#cursor_4 {
+  position: fixed;
+  border: 1px solid #07085e;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition-duration: 160ms;
+}
+
+#cursor_5 {
+  position: fixed;
+  border: 1px solid #07085e;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition-duration: 170ms;
+}
+
 /* Intro section */
 
 .intro {
@@ -315,12 +421,28 @@ header {
 }
 
 .services {
+  position: relative;
   margin-bottom: 4em;
 }
 
 .service {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.service:nth-child(2) {
+  transition-delay: 200ms;
+
+}
+
+.service:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.introduction__services {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 4em;
 }
 
 @media (min-width: 800px) {
@@ -345,6 +467,11 @@ header {
 
 .about-me__img {
   box-shadow: var(--bs);
+  transition-delay: 400ms;
+}
+
+.about-me__body {
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -366,7 +493,7 @@ header {
     grid-column: 1 / -1;
     grid-row: 2;
     position: relative;
-    left: -1em;
+    left: -1em; /*     --------- fix here ----------*/
     width: calc(100% + 2em);
     padding-left: 1em;
     padding-right: calc(200px + 4em);
@@ -383,6 +510,7 @@ header {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
+  place-items: normal;
 }
 
 .portfolio {
@@ -394,7 +522,16 @@ header {
   background: var(--clr-accent2);
   overflow: hidden;
   max-height: 250px;
-  margin: 0.05em;
+  margin: 0.5em;
+}
+
+
+.portfolio__item:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.portfolio__item:nth-child(3) {
+  transition-delay: 400ms;
 }
 
 .portfolio__img {
@@ -413,10 +550,14 @@ header {
   opacity: 0.75;
 }
 
+.portfolio-image-syx-tree {
+  max-height: 100px;
+  max-width: 10px;
+}
 /* Footer */
 .footer {
   background: rgb(7, 35, 48);
-  color: var(--clr-accent);
+  color: var(--clr-accent2);
   text-align: center;
   padding: 2.5em 0;
   font-size: var(--fs-h3);
@@ -505,3 +646,5 @@ header {
 }
 
 /* ---------- person lister ------------ */
+
+
