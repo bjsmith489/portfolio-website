@@ -49,9 +49,9 @@
     </header>
 
     <!-- Introduction -->
-    <section class="intro" id="home">
+    <section class="intro stationary-hidden" id="home">
       <h1 class="section__title section__title--intro">
-        Hello, I am <strong>Benjamin Smith</strong>
+        <strong>Benjamin Smith</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">
         Full-Stack Developer
@@ -63,34 +63,44 @@
       />
     </section>
 
-    <!-- My Services-->
+    <!-- Custom Icons -->
+    <div class="custom_icon_1" id="cursor_1"></div>
+    <div class="custom_icon_2" id="cursor_2"></div>
+    <div class="custom_icon_3" id="cursor_3"></div>
+    <div class="custom_icon_4" id="cursor_4"></div>
+    <div class="custom_icon_5" id="cursor_5"></div>
 
-    <section class="my-services" id="services">
+    <!-- My Services-->
+    <section class="my-services stationary-hidden" id="services">
       <h2 class="section__title section__title--services">What I do</h2>
+      <p class="introduction__services">
+        My primary expertise is in Web development. Get together with me for a
+        coding night on a Java Springboot Web app deployed on AWS and we are
+        good to go. Under some opportunites I have had the privledge of working
+        on Adroid developement or in my spare time Unity Game developement.
+      </p>
       <div class="services">
-        <div class="service">
+        <!-- / service  -->
+        <div class="service transforming-hidden">
+          <h3>Java, React, MySQL deployed on AWS</h3>
+          <p>Springboot, HTML, CSS, JSPs, React</p>
+        </div>
+        <!-- / service  -->
+        <div class="service transforming-hidden">
           <h3>Game Development</h3>
           <p>Unity game engine, C#, Android</p>
         </div>
         <!-- / service  -->
-        <div class="service">
+        <div class="service transforming-hidden">
           <h3>Android</h3>
           <p>Room, OkHttp3, Google (maps, login, authenticator...)</p>
         </div>
-        <!-- / service  -->
-        <div class="service">
-          <h3>Java Full Stack</h3>
-          <p>Springboot, HTML, CSS, JSPs, React</p>
-        </div>
-        <!-- / service  -->
       </div>
-      <!-- / services  -->
-
       <a href="#work" class="btn">My Work</a>
     </section>
 
     <!-- About me  -->
-    <section class="about-me" id="about">
+    <section class="about-me stationary-hidden" id="about">
       <h2 class="section__title section__title--about">Who I am</h2>
       <p class="section__subtitle section__subtitle--about">
         Developer, Artist, Imagineer!!
@@ -99,21 +109,25 @@
       <div class="about-me__body">
         <p>
           Drinker of Knowledge!! Every body of thought has a way of bathing the
-          mind.
+          mind. From Philosophy, Music, Art, to Politics of Social Motions and
+          of course, Systems of Software Development.
         </p>
         <p>
-          From Philosophy, Music, Art, to Politics of Social Motions and of
-          course, Systems of Software Development.
+          I believe strongly in giving back to my community. From coaching two
+          kids Soccer teams, advocating for Early Childhood Education, or
+          Volunteering my services as a Web Developer. I currently help maintain
+          multiple webistes for local community outreach programs.
         </p>
       </div>
       <img
         src="img/WaterDroplet.png"
         alt="Cool pic of Benjamin Smith"
-        class="about-me__img"
+        class="about-me__img stationary-hidden"
       />
     </section>
+
     <!-- My work  -->
-    <section class="my-work" id="work">
+    <section class="my-work transforming-hidden" id="work">
       <h2 class="section__title section__title-work">My Work</h2>
       <p class="section__subtitle section__subtitle--work">
         A selection of my work. All work presented will be available on my
@@ -125,7 +139,7 @@
         <a
           title="Java Springboot Application, 'Task Manager'"
           href="portfolio-item-task-manager.html"
-          class="portfolio__item"
+          class="portfolio__item transforming-hidden"
           name="Task Manager"
         >
           <img
@@ -134,9 +148,11 @@
             class="portfolio__img"
           />
         </a>
-
         <!-- portfolio item 02  -->
-        <a href="portfolio-item-syx-tree.html" class="portfolio__item">
+        <a
+          href="portfolio-item-syx-tree.html"
+          class="portfolio__item transforming-hidden"
+        >
           <img
             title="Unity C++ Game, 'Syx Tree'  ---- UNDER CONSTRUCTION ----"
             src="img/SyxTreeForest.png"
@@ -148,7 +164,7 @@
         <!-- portfolio item 03  -->
         <a
           href="portfolio-item-person-lister.html"
-          class="portfolio__item"
+          class="portfolio__item transforming-hidden"
           name="Person Lister"
           style="padding-left: 2.5em; padding-right: 2.5em"
         >
