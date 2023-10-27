@@ -26,9 +26,6 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <i class="fas fa-meteor"></i>
-      </div>
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
       </button>
@@ -57,42 +54,36 @@
         Full-Stack Developer
       </p>
       <img
-        src="img/20210225_105227.jpg"
+        src="img/good_photo_edited.jpg"
         alt="A picture of Benjamin Smith"
         class="intro__img"
       />
     </section>
 
-    <!-- Custom Icons -->
-    <div class="custom_icon_1" id="cursor_1"></div>
-    <div class="custom_icon_2" id="cursor_2"></div>
-    <div class="custom_icon_3" id="cursor_3"></div>
-    <div class="custom_icon_4" id="cursor_4"></div>
-    <div class="custom_icon_5" id="cursor_5"></div>
-
     <!-- My Services-->
     <section class="my-services stationary-hidden" id="services">
       <h2 class="section__title section__title--services">What I do</h2>
       <p class="introduction__services">
-        My primary expertise is in Web development. Get together with me for a
-        coding night on a Java Springboot Web app deployed on AWS and we are
+        My primary expertise is Full Stack Development. Get together with me for
+        a coding night on a Java Springboot Web app deployed on AWS and we are
         good to go. Under some opportunites I have had the privledge of working
         on Adroid developement or in my spare time Unity Game developement.
       </p>
       <div class="services">
         <!-- / service  -->
         <div class="service transforming-hidden">
-          <h3>Java, React, MySQL deployed on AWS</h3>
-          <p>Springboot, HTML, CSS, JSPs, React</p>
+          <h3>Java Application on AWS</h3>
+          <p>Java Springboot, React, MySQL deployed on AWS</p>
         </div>
         <!-- / service  -->
         <div class="service transforming-hidden">
-          <h3>Game Development</h3>
-          <p>Unity game engine, C#, Android</p>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript</p>
         </div>
         <!-- / service  -->
         <div class="service transforming-hidden">
-          <h3>Android</h3>
+          <h3>Personal projects</h3>
+          <p>Unity, C#, Android</p>
           <p>Room, OkHttp3, Google (maps, login, authenticator...)</p>
         </div>
       </div>
@@ -101,11 +92,17 @@
 
     <!-- About me  -->
     <section class="about-me stationary-hidden" id="about">
+      <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
       <h2 class="section__title section__title--about">Who I am</h2>
       <p class="section__subtitle section__subtitle--about">
         Developer, Artist, Imagineer!!
       </p>
-
       <div class="about-me__body">
         <p>
           Drinker of Knowledge!! Every body of thought has a way of bathing the
@@ -113,17 +110,15 @@
           of course, Systems of Software Development.
         </p>
         <p>
-          I believe strongly in giving back to my community. From coaching two
-          kids Soccer teams, advocating for Early Childhood Education, or
-          Volunteering my services as a Web Developer. I currently help maintain
-          multiple webistes for local community outreach programs.
+          I believe strongly in personal commitment and our grace in growth. In
+          this practice I strive to be one who givesr back to my community. I
+          coach two of my childrens Soccer teams, advocate for Early Childhood
+          Education and Homeschooling practices, and volunteer my services as a
+          Web Developer. I currently help maintain multiple webistes for local
+          community outreach programs. This includes a social presence and data
+          processesing which we use to drive donation requests.
         </p>
       </div>
-      <img
-        src="img/WaterDroplet.png"
-        alt="Cool pic of Benjamin Smith"
-        class="about-me__img stationary-hidden"
-      />
     </section>
 
     <!-- My work  -->
@@ -175,14 +170,34 @@
             class="portfolio__img"
           />
         </a>
+
+        <!-- portfolio item 04  -->
+        <div
+          class="portfolio__item transforming-hidden dropdown"
+          style="padding-left: 3em; padding-right: 3em"
+          id="cheney-cupboard"
+        >
+          <div class="dropdown-content">
+            <a
+              href="https://github.com/bjsmith489/CheneyCupboard"
+              name="Cheney Cupboard"
+              id="portfolio-item-cheney-cupboard"
+              >Github code page</a
+            >
+            <a href="https://bjsmith489.github.io/CheneyCupboard/">Website</a>
+          </div>
+          <img
+            title="Non-Profit Website, 'Cheney Cupboard'"
+            src="img/CheneyCupboardPrimaryLogo.png"
+            alt="Picture 4 for the portfolio"
+            class="portfolio__img"
+          />
+        </div>
       </div>
     </section>
 
     <!-- Footer  -->
     <footer class="footer">
-      <a href="#" class="return-to-top">
-        <i class="fa fa-arrow-circle-up"></i>
-      </a>
       <a href="mailto:benjaminsmith489@gmail.com" class="footer__link"
         >benjaminsmith489@gmail.com</a
       >
@@ -204,13 +219,20 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link"></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link"></a>
+          <a
+            class="social-list__link"
+            href="/files/BenjaminSmithResume.pdf"
+            download
+          >
+            <i class="fa fa-file" aria-hidden="true"></i>
+          </a>
         </li>
       </ul>
     </footer>
+
+    <a href="#" class="return-to-top">
+      <i class="fa fa-arrow-circle-up"></i>
+    </a>
 
     <script src="js/index.js"></script>
   </body>
