@@ -5,7 +5,7 @@ const portfolioItem = document.querySelectorAll(".portfolio__item");
 const stationaryHiddenElements =
   document.querySelectorAll(".stationary-hidden");
 const transformingHiddenElements = document.querySelectorAll(
-  ".transforming-hidden"
+  ".transforming-hidden",
 );
 
 navToggle.addEventListener("click", () => {
@@ -134,3 +134,14 @@ transformingHiddenElements.forEach((el) => transformingObserver.observe(el));
 //     cursor4.classList.add("rotate");
 //     cursor5.classList.add("rotate");
 //   }, 170);};
+
+async function login(email, password) {
+  const res = await fetch("https://aws-njwz.onrender.com/api/users/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+
+  const user = await res.json();
+  console.log(user);
+}

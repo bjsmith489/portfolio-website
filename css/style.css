@@ -504,7 +504,7 @@ header {
 
 /* My Work */
 .my-work {
-  background-color: var(--clr-light);
+  background-color: var(--clr-accent);
   color: var(--clr-dark);
   text-align: center;
   place-items: normal;

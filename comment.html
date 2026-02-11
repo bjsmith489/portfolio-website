@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leave a Comment</title>
+  </head>
+  <body>
+    <h2>Leave a Comment</h2>
+
+    <form id="commentForm">
+      <textarea id="message" placeholder="Your comment..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const backend = "https://aws-njwz.onrender.com";
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      if (!user) {
+        window.location.href = "login.html";
+      }
+
+      document
+        .getElementById("commentForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const message = document.getElementById("message").value;
+
+          await fetch(`${backend}/api/comments`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              userId: user.id,
+              message: message,
+            }),
+          });
+
+          alert("Comment submitted!");
+        });
+    </script>
+  </body>
+</html>
